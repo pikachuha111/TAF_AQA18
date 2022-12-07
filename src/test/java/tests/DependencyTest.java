@@ -8,19 +8,19 @@ public class DependencyTest {
 
     @Test
     public void stepb() {
-        Assert.assertEquals(calculator.sum(2, 3), 5, "Неверная сумма ...");
+        Assert.assertEquals(calculator.sum(2, 3), 5, "???????? ????? ...");
     }
     @Test(dependsOnMethods = "stepb")
     public void stepa() {
-        Assert.assertEquals(calculator.sum(2, 3), 6, "Неверная сумма ...");
+        Assert.assertEquals(calculator.sum(2, 3), 6, "???????? ????? ...");
     }
     @Test(dependsOnMethods = "stepa", alwaysRun = true)
     public void stepd() {
-        Assert.assertEquals(calculator.sum(2, 3), 5, "Неверная сумма ...");
+        Assert.assertEquals(calculator.sum(2, 3), 5, "???????? ????? ...");
     }
     @Test(dependsOnMethods = {"stepd", "stepa"})
     public void stepc() {
-        Assert.assertEquals(calculator.sum(2, 3), 5, "Неверная сумма ...");
+        Assert.assertEquals(calculator.sum(2, 3), 5, "???????? ????? ...");
     }
 
 }

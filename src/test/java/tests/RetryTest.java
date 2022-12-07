@@ -1,5 +1,6 @@
 package tests;
 
+import com.sun.net.httpserver.Authenticator;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.BaseTest;
